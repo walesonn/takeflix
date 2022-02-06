@@ -1,0 +1,33 @@
+header {
+  background: linear-gradient(black, rgba(0, 0, 0, 0)); }
+
+body {
+  background-color: #000;
+  overflow-y: auto;
+  overflow-x: hidden; }
+
+main {
+  background-image: url("https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABRL1U2lWozfZmS28-a5GMYDDzXhr12vjJQAGOVkBaOLfS-gWIKOw7qJ56_oSDu-V8ArS4uUP0bH9zqQyK8dvwFw4-kxz.webp?r=558");
+  width: 100vw;
+  height: 720px;
+  background-size: cover;
+  background-attachment: fixed; }
+
+h1 {
+  font-size: 50px; }
+
+.navbar-brand {
+  color: red;
+  font-weight: 900;
+  font-size: larger; }
+
+#profile {
+  background-image: url("https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABa7EZ2KI6GwiSph68ATOoM-PE6yiuRIVDLAMO7Ft4mIqLthYdJxU3jBEJiEy7Wq3SrBQvjjJanCexdGwMv6LK5o.png?r=6c5");
+  width: 30px;
+  height: 30px; }
+
+.arrow-right {
+  position: absolute;
+  float: right; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Interface based netflix" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Takeflix</title>
+  </head>
+  <body>
+    <header class="container-fluid bg-secondary p-2 fixed-top bg-transparent">
+      <div
+        class="col-md-12 d-flex flex-wrap justify-content-between align-items-center"
+      >
+        <div class="navbar-brand">TAKEFLIX</div>
+
+        <nav class="navbar-collapse col-md-5">
+          <ul class="navbar-nav navbar-expand">
+            <li class="nav-item m-2">
+              <a href="#" class="nav-link text-light">Início</a>
+            </li>
+            <li class="nav-item m-2">
+              <a href="#" class="nav-link text-light">Séries</a>
+            </li>
+            <li class="nav-item m-2">
+              <a href="#" class="nav-link text-light">Filmes</a>
+            </li>
+            <li class="nav-item m-2">
+              <a href="#" class="nav-link text-light">Bombando</a>
+            </li>
+            <li class="nav-item m-2">
+              <a href="#" class="nav-link text-light">Minha lista</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="navbar-collapse col-md-3">
+          <ul class="navbar-nav navbar-expand">
+            <li class="nav-item m-2 text-light">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                />
+              </svg>
+            </li>
+            <li class="nav-item text-light m-2">Infantil</li>
+            <li class="nav-item m-2 text-light">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-bell"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"
+                />
+              </svg>
+            </li>
+            <li class="nav-item text-light m-2">
+              <div id="profile" class="rounded"></div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container-fluid d-flex flex-column justify-content-between">
+      <section
+        class="col-md-6 d-flex flex-column justify-content-center"
+        style="margin-top: 200px"
+      >
+        <h4 class="ml-5 text-light mt-5">THE</h4>
+        <h1 class="font-weight-bolder text-light">WALKING DEAD</h1>
+        <p class="text-light font-weight-bold">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+          blanditiis, aut veritatis eaque est, tempora nihil ab nemo alias nobis
+          voluptas ad, repellendus aliquam pariatur vitae! Adipisci corrupti
+          aliquam omnis.
+        </p>
+
+        <div>
+          <button class="btn btn-light font-weight-bolder">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-play-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"
+              />
+            </svg>
+            Assistir
+          </button>
+          <button class="btn btn-dark font-weight-bolder">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-info-circle"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+              />
+              <path
+                d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"
+              />
+            </svg>
+            Mais informações
+          </button>
+        </div>
+      </section>
+      <section class="container-fluid mt-5">
+        <div class="container-fluid">
+          <div
+            id="controls_carousel1"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <h6 class="text-light">Populares na takeflix</h6>
+
+            <div class="row">
+              <div class="carousel-item active">
+                <div class="d-flex m-1">
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABd7xHz1wGtnzCxPiI4QinWJbUCWJH_f0qZlQn1B3_CEOitw_JVEkB_fQteJCZQa831xeOnfDg1kaXPm3ywL8qGy--DhdYTpRVajjg7ZLg04F5n0KBVPia7EjK5Rb4fFduvhdageSspTKakZ10XUoIESuWa_hykVwHTowIDb3EiH4Gbfgyon2JWE.jpg?r=7ec"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcQ7C25Ru8kOA8AW4Iks-V91VmzbPdH36mQkkrcEAGTPZsBjfGl6T94Z3b3zPCbs5xsGl8M0VUugwp4ncZHW4zp5J-w.webp?r=422"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABde-JMJ1QBbwKefdjPOQh8AUg-NFXiWs-cUvWxBtitqnr6y8ThHC6qjGN-ERY2ac6FEA1tEVRsMRYLR3krk9fuiizfo.webp?r=c6e"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfCzcQX1MYtuSRT3_Mp3Pz_vLG0xkSb9oizrwqHDxHxU96JYgq3xqR21E8VlwS87FanTHehnFYK4QJXF_RBCgZn3Rhn4h9M2FLelwItkp8JlNU5bwD5vBG6KK68h9vLJOF9tDBcYVor-RjUg1S86hYxvuE7r7X2GEWfU_kD1rtMxZ51Os3uD3hs17ehJX_CZpPuJg9DA5lTR0zxsPIvVTpD2.jpg?r=9c0"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSffab-b48tj8APEpXWge2vUMcJyRCujRjILeBBjTuOrntJ1-0pMcWrW9zT2ugOZEbrBtC7WtnMz5jrqDRsnrWIsrg7cBSyNckVVJM4bN2ZfGM5jFhCf1szTA43P.jpg?r=155"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABW4PQqqGYU-zvKc347ZnHwrdZk3tGtWbheqwxoXwNi-6PhiU0Dpo9xZ0H53sLfZNpChMO4w3pEhzV1cth2rHyrdopc4.webp?r=230"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeo3rqF1KcGqBdGpNHyyMTRfby4t-Y4GDef6MQK1OoX-YQSCqj_RY-gL3BwyjiNzQYKRJIhXscqnHQo397W-AVQTnsair9FHYrMPWNlzza1fT9MPX6Cm9lEm6Hx0.jpg?r=71a"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABevoIW6wOxrk4b_rzBkDcHfs3huZ16Ipp2BYy3j3tzAx0PrAtRLHMtqBBp690CX6IlajsirUpde2AwVISBlzj0U9k_8.webp?r=f5e"
+                    alt="First slide"
+                  />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-12 d-flex m-1">
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABb-6y6AyRjC57n5pQlekCdsXMB_WeNCnedHmz2lN5tzJfnjM9UgQfctP5HEIHmWeprl6-SLaj-3WY0KOKvXGVaCu7No_Wv2kmakaqLlrEbZgooF7LF-dwpTNvE38.jpg?r=e8c"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVBBaG5RXFSNAPJn5NXXhdoXcigV-jFeU0weU4gGW8RA8FPB4xJ5x0LDho2BIeopSF-3Jl87R7mh00j-HASOrkU-GTJDcl6olOUgCzPeVvDQgaD2z7A70XsmgJpR.jpg?r=cc5"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABT634aW5KzAilz6pGMx-F--j7hQusisYYmgQ6b4EThKBWugKNybF_-zf-C7_SnlbuqJdL0q5k0vynorE3lgAsaVRdk0.webp?r=73c"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABW4PQqqGYU-zvKc347ZnHwrdZk3tGtWbheqwxoXwNi-6PhiU0Dpo9xZ0H53sLfZNpChMO4w3pEhzV1cth2rHyrdopc4.webp?r=230"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeo3rqF1KcGqBdGpNHyyMTRfby4t-Y4GDef6MQK1OoX-YQSCqj_RY-gL3BwyjiNzQYKRJIhXscqnHQo397W-AVQTnsair9FHYrMPWNlzza1fT9MPX6Cm9lEm6Hx0.jpg?r=71a"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABevoIW6wOxrk4b_rzBkDcHfs3huZ16Ipp2BYy3j3tzAx0PrAtRLHMtqBBp690CX6IlajsirUpde2AwVISBlzj0U9k_8.webp?r=f5e"
+                    alt="First slide"
+                  />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-12 d-flex m-1">
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABW4PQqqGYU-zvKc347ZnHwrdZk3tGtWbheqwxoXwNi-6PhiU0Dpo9xZ0H53sLfZNpChMO4w3pEhzV1cth2rHyrdopc4.webp?r=230"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeo3rqF1KcGqBdGpNHyyMTRfby4t-Y4GDef6MQK1OoX-YQSCqj_RY-gL3BwyjiNzQYKRJIhXscqnHQo397W-AVQTnsair9FHYrMPWNlzza1fT9MPX6Cm9lEm6Hx0.jpg?r=71a"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABevoIW6wOxrk4b_rzBkDcHfs3huZ16Ipp2BYy3j3tzAx0PrAtRLHMtqBBp690CX6IlajsirUpde2AwVISBlzj0U9k_8.webp?r=f5e"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABd7xHz1wGtnzCxPiI4QinWJbUCWJH_f0qZlQn1B3_CEOitw_JVEkB_fQteJCZQa831xeOnfDg1kaXPm3ywL8qGy--DhdYTpRVajjg7ZLg04F5n0KBVPia7EjK5Rb4fFduvhdageSspTKakZ10XUoIESuWa_hykVwHTowIDb3EiH4Gbfgyon2JWE.jpg?r=7ec"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcQ7C25Ru8kOA8AW4Iks-V91VmzbPdH36mQkkrcEAGTPZsBjfGl6T94Z3b3zPCbs5xsGl8M0VUugwp4ncZHW4zp5J-w.webp?r=422"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABde-JMJ1QBbwKefdjPOQh8AUg-NFXiWs-cUvWxBtitqnr6y8ThHC6qjGN-ERY2ac6FEA1tEVRsMRYLR3krk9fuiizfo.webp?r=c6e"
+                    alt="First slide"
+                  />
+                </div>
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#controls_carousel1"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon fa-th-large"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#controls_carousel1"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div id="carousel2" class="carousel slide" data-ride="carousel">
+            <h6 class="text-light">Em alta</h6>
+            <div class="row">
+              <div class="carousel-item active">
+                <div class="col-md-12 d-flex m-1">
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABXm53-usPm-G_IlM4AyESwo2y13J7LKFkvX0AB6OmW_eRMo-UIQSGicg5mjK42i7EQkniVO5PbEmedFacFtEHf3Xvve8pDzA0a5kGyav__zO2kTOXJTWTfkkK7lh.jpg?r=3fc"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVyDn61WhbjtDhWZY40abnQb6gObMLuLtJBzf6gRM7Z5MEp8j8ayq_pbAF5T12IEDxxpBf0I4eY4B4RpANjzUluASLk.webp?r=0ff"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYekUSUjePjvJ6sPF6fsSdGV_dQg80n1jb1gSGJsRFgtZAp8acRml6Mi00BKIs3k9UC4eO1LmebJFYEeq4D_DoXfSBxt3QapEsJLRH2m4YJwAVfeaOD9mrJ7WnVOdynpNO_R7JzfwYF0h9VtJHIH9YmeKY6mRQ.jpg?r=3f8"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVOK_p94f-dqqCuAuqXwgldWvNqc_bU4AqcQaFMpV5izT6v2WAK54CjzxRkHECKVSwvNCQuIlruq6dyDJPJ8RzxYNKo.webp?r=68e"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVho_1mObvNv6sKRrR9fdnDNWR-5KIhX9Yvqa0iOuLx17Y7NyCIEZV21UcyCsPi1T4gNUWjp940ZFDQmJ-PFLH_pY923zTr6TACsIpJ31rC9chznQmLCD3BpnYoT.jpg?r=4b5"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABamJYqJAJpJf0RW7N4BN2BJbr4bNZPctsM2EMEAPTCIg0cGs9EqgYn03AiV4nURWN6Y4HV8oFCGol_F8mfVwmnEDT4DwoAwD0aRXvzCQZJL6Y4N5ogl1aY-EvKC-.jpg?r=f06"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABe3nneGPgo3tnT2yuWVKweTBg4t5OFWlO-PJ3rCUIap-G0wj8SAcsNoQPnBNTLsSU_TezXye-iPrMlQK3Vy73Gv8nconrcK2rHmeXLnjBNp5inLxKFmpftRT5rPP.jpg?r=c39"
+                    alt="First slide"
+                  />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-12 d-flex m-1">
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVho_1mObvNv6sKRrR9fdnDNWR-5KIhX9Yvqa0iOuLx17Y7NyCIEZV21UcyCsPi1T4gNUWjp940ZFDQmJ-PFLH_pY923zTr6TACsIpJ31rC9chznQmLCD3BpnYoT.jpg?r=4b5"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABamJYqJAJpJf0RW7N4BN2BJbr4bNZPctsM2EMEAPTCIg0cGs9EqgYn03AiV4nURWN6Y4HV8oFCGol_F8mfVwmnEDT4DwoAwD0aRXvzCQZJL6Y4N5ogl1aY-EvKC-.jpg?r=f06"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABe3nneGPgo3tnT2yuWVKweTBg4t5OFWlO-PJ3rCUIap-G0wj8SAcsNoQPnBNTLsSU_TezXye-iPrMlQK3Vy73Gv8nconrcK2rHmeXLnjBNp5inLxKFmpftRT5rPP.jpg?r=c39"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABUjsKDiaKwLmrV662pwmVKEtRmbJI-s8M9ojCqr2QEdnPUJPX86RP-n9IGXxGcaHWkTf-cwz5e4kBLN3jYLM7HuBfYA.webp?r=01d"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQwb_op_ZlXYQ-ceCrC9qcALxCrGzK-y0XShzvN1BFcLh_QTNhE0AJBmAz2T4NbdcaqATjHfbaN0FAUV58bQfdCpUMw-JSQ0nDi34fNAXwNnSqKS21ay0vAdP89H.jpg?r=9d1"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSuY2klLrox6vPnW1IXVisEmZV9IY0NMGKXPh1_KfllopApscoMCmH3GVWiD0jp9rhIc2A_jxYmN3v3BLhETXYqO0us4S9r7xuAFvLOofpNq75F09D3ZQ5CxHtTm_4g88-V1oXtiUIyfvUKe897WKM9U5W-ve2IWJCwTpkcrEbs60GDYIWcM8RU.jpg?r=d9d"
+                    alt="First slide"
+                  />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-12 d-flex m-1">
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABUjsKDiaKwLmrV662pwmVKEtRmbJI-s8M9ojCqr2QEdnPUJPX86RP-n9IGXxGcaHWkTf-cwz5e4kBLN3jYLM7HuBfYA.webp?r=01d"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQwb_op_ZlXYQ-ceCrC9qcALxCrGzK-y0XShzvN1BFcLh_QTNhE0AJBmAz2T4NbdcaqATjHfbaN0FAUV58bQfdCpUMw-JSQ0nDi34fNAXwNnSqKS21ay0vAdP89H.jpg?r=9d1"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSuY2klLrox6vPnW1IXVisEmZV9IY0NMGKXPh1_KfllopApscoMCmH3GVWiD0jp9rhIc2A_jxYmN3v3BLhETXYqO0us4S9r7xuAFvLOofpNq75F09D3ZQ5CxHtTm_4g88-V1oXtiUIyfvUKe897WKM9U5W-ve2IWJCwTpkcrEbs60GDYIWcM8RU.jpg?r=d9d"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVho_1mObvNv6sKRrR9fdnDNWR-5KIhX9Yvqa0iOuLx17Y7NyCIEZV21UcyCsPi1T4gNUWjp940ZFDQmJ-PFLH_pY923zTr6TACsIpJ31rC9chznQmLCD3BpnYoT.jpg?r=4b5"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABamJYqJAJpJf0RW7N4BN2BJbr4bNZPctsM2EMEAPTCIg0cGs9EqgYn03AiV4nURWN6Y4HV8oFCGol_F8mfVwmnEDT4DwoAwD0aRXvzCQZJL6Y4N5ogl1aY-EvKC-.jpg?r=f06"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABe3nneGPgo3tnT2yuWVKweTBg4t5OFWlO-PJ3rCUIap-G0wj8SAcsNoQPnBNTLsSU_TezXye-iPrMlQK3Vy73Gv8nconrcK2rHmeXLnjBNp5inLxKFmpftRT5rPP.jpg?r=c39"
+                    alt="First slide"
+                  />
+                </div>
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#carousel2"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carousel2"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div id="carousel3" class="carousel slide" data-ride="carousel">
+            <h6 class="text-light">Mais curtidos</h6>
+            <div class="row">
+              <div class="carousel-item active">
+                <div class="col-md-12 d-flex m-1">
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQxm5nmWUOd11691cmzkm0hnrB6-7S9o1VSvVh8kou8jhICtwccH8YncGUWCYxoNhJbs-9rfw_VO64Fg5LXLBS9mYzmhDCa_WnlCFub3cGchy1neAg8zFa6UjbT-.jpg?r=5df"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABd_JVY6mrYuKHBR7sUtnrRAKuQtCccP6B0aEuWeEoFclpmi1qG5Pr0M9D8Lsbt7PuxbfU2brdusglep-OUPu3iQYW4vPtCS7GAAuFVS8tNUrZ-9JE0r6_KOML70B.jpg?r=c53"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRUWSfKkQopU1Jz_fKHkW2v02M4w-GffwwUGYFCYBBxpw8vnJ59KCv90EEiXRUj_qXQ3d6LiNfyYBktNx9xG8-pfMY2rquJrUqIJ-U5EoWffE9OcwXPiXkJcuy7eliz3Zm9VUTp8TzN1vzfS9C6lK_IO0PA.webp?r=3f4"
+                    alt="First slide"
+                  />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-12 d-flex m-1">
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZJ8tf7CQ4KJE9UzhDlOrJYYfa41OjwBgX1E_ILgxRptKPKTmKXS3sCFQH-J_xgIHmTqzqkPI5NGunvDA-yY0FVs218.webp?r=777"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABaRemQZyOeGScod9RDTtdwQlTSl1gkj5feI0z_gLTj6HHlM6GXT97P3C5NJktUvQSoyKz71rEkOetZJFFmmU9TO2pJ2sYjdRgz20A0QvpLB6c9BaghMUK-EIyta_.jpg?r=9a1"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfxIriH4u7NOZd9ZverbI8z8SjawgbUTMtKC9XHRDxp547xuOC5XN6xkAB87RtppYSOr3zU4j4KZOVgBIFCACWhPxUkvoYSEyLbCSDZVuj6d0q-UgGd5meXFAdoD.jpg?r=790"
+                    alt="First slide"
+                  />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-12 d-flex m-1">
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABReYTAS3KP6hra7TTCurMUFYAozilA2mnTSAg5DfqJk3mZ8S2gV-v7KFTFl5piepQswyNN_PvRZEUpSdibE8zQlAV9G-srZzmlgNEIQlel-Ed1puW4CSPEPkUBNn.jpg?r=d24"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZhDgycx46KRfpO4VnnVueqIBRubaSAN8SiUNq_wDnzsUJSWQVxREcah03Lql2JVALNWZoL68ZAjiGYeZ0lrR8wCdV8.webp?r=9c5"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABWLEXzpMvYOReB3BjxS6uAs-N3_TTAqzhJM5p9RF9kG5i9L9eLLqOVNwZkcluB6xtFvGW2DJNoOFWw3K1GCK3qfSx-J22JOGbVJoum2w92e5jFNINMWyNcgi5ZiP.jpg?r=c3c"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABd7xHz1wGtnzCxPiI4QinWJbUCWJH_f0qZlQn1B3_CEOitw_JVEkB_fQteJCZQa831xeOnfDg1kaXPm3ywL8qGy--DhdYTpRVajjg7ZLg04F5n0KBVPia7EjK5Rb4fFduvhdageSspTKakZ10XUoIESuWa_hykVwHTowIDb3EiH4Gbfgyon2JWE.jpg?r=7ec"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcQ7C25Ru8kOA8AW4Iks-V91VmzbPdH36mQkkrcEAGTPZsBjfGl6T94Z3b3zPCbs5xsGl8M0VUugwp4ncZHW4zp5J-w.webp?r=422"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABde-JMJ1QBbwKefdjPOQh8AUg-NFXiWs-cUvWxBtitqnr6y8ThHC6qjGN-ERY2ac6FEA1tEVRsMRYLR3krk9fuiizfo.webp?r=c6e"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfCzcQX1MYtuSRT3_Mp3Pz_vLG0xkSb9oizrwqHDxHxU96JYgq3xqR21E8VlwS87FanTHehnFYK4QJXF_RBCgZn3Rhn4h9M2FLelwItkp8JlNU5bwD5vBG6KK68h9vLJOF9tDBcYVor-RjUg1S86hYxvuE7r7X2GEWfU_kD1rtMxZ51Os3uD3hs17ehJX_CZpPuJg9DA5lTR0zxsPIvVTpD2.jpg?r=9c0"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSffab-b48tj8APEpXWge2vUMcJyRCujRjILeBBjTuOrntJ1-0pMcWrW9zT2ugOZEbrBtC7WtnMz5jrqDRsnrWIsrg7cBSyNckVVJM4bN2ZfGM5jFhCf1szTA43P.jpg?r=155"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABW4PQqqGYU-zvKc347ZnHwrdZk3tGtWbheqwxoXwNi-6PhiU0Dpo9xZ0H53sLfZNpChMO4w3pEhzV1cth2rHyrdopc4.webp?r=230"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeo3rqF1KcGqBdGpNHyyMTRfby4t-Y4GDef6MQK1OoX-YQSCqj_RY-gL3BwyjiNzQYKRJIhXscqnHQo397W-AVQTnsair9FHYrMPWNlzza1fT9MPX6Cm9lEm6Hx0.jpg?r=71a"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABevoIW6wOxrk4b_rzBkDcHfs3huZ16Ipp2BYy3j3tzAx0PrAtRLHMtqBBp690CX6IlajsirUpde2AwVISBlzj0U9k_8.webp?r=f5e"
+                    alt="First slide"
+                  />
+                </div>
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#carousel3"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carousel3"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div id="carousel4" class="carousel slide" data-ride="carousel">
+            <h6 class="text-light">De tirar o fôlego</h6>
+            <div class="row">
+              <div class="carousel-item active">
+                <div class="col-md-12 d-flex m-1">
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbxwUm-wg9f7vzZXroZB36GVfShZHKUuVWwAK3xaGNEJHbixUdb700iIvOPdJFaf6LbUtEXULGFJtUplzf9O5sp5ZVrC3ssMmibS4WrkDyeOJzhl40LSxZkia4K0.jpg?r=866"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABXuxQLbB7emCLRRvOgcen1fOfXQLT8jhRYEMYf1bb6jc2o-P1imf547QI3AklSsX1ZRKZIt157Ch7p9WMWrz7k7HqyDX1Slgtuzo-JHwGlCHZVt6EnOC0q8Epw_M8lPJ39JYyAZHLuAqkugttDabny5bWUxr0g.jpg?r=81b"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRTrjBx3wvV42z2gUOC1V_1WA3fPJu3Ck28OQLps5ZSO8UmhQMxCs2qCBui2_2LDN_ytak9WgXCw9AyUqWq9u5BariE.webp?r=098"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABd7xHz1wGtnzCxPiI4QinWJbUCWJH_f0qZlQn1B3_CEOitw_JVEkB_fQteJCZQa831xeOnfDg1kaXPm3ywL8qGy--DhdYTpRVajjg7ZLg04F5n0KBVPia7EjK5Rb4fFduvhdageSspTKakZ10XUoIESuWa_hykVwHTowIDb3EiH4Gbfgyon2JWE.jpg?r=7ec"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcQ7C25Ru8kOA8AW4Iks-V91VmzbPdH36mQkkrcEAGTPZsBjfGl6T94Z3b3zPCbs5xsGl8M0VUugwp4ncZHW4zp5J-w.webp?r=422"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABde-JMJ1QBbwKefdjPOQh8AUg-NFXiWs-cUvWxBtitqnr6y8ThHC6qjGN-ERY2ac6FEA1tEVRsMRYLR3krk9fuiizfo.webp?r=c6e"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfCzcQX1MYtuSRT3_Mp3Pz_vLG0xkSb9oizrwqHDxHxU96JYgq3xqR21E8VlwS87FanTHehnFYK4QJXF_RBCgZn3Rhn4h9M2FLelwItkp8JlNU5bwD5vBG6KK68h9vLJOF9tDBcYVor-RjUg1S86hYxvuE7r7X2GEWfU_kD1rtMxZ51Os3uD3hs17ehJX_CZpPuJg9DA5lTR0zxsPIvVTpD2.jpg?r=9c0"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSffab-b48tj8APEpXWge2vUMcJyRCujRjILeBBjTuOrntJ1-0pMcWrW9zT2ugOZEbrBtC7WtnMz5jrqDRsnrWIsrg7cBSyNckVVJM4bN2ZfGM5jFhCf1szTA43P.jpg?r=155"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABW4PQqqGYU-zvKc347ZnHwrdZk3tGtWbheqwxoXwNi-6PhiU0Dpo9xZ0H53sLfZNpChMO4w3pEhzV1cth2rHyrdopc4.webp?r=230"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeo3rqF1KcGqBdGpNHyyMTRfby4t-Y4GDef6MQK1OoX-YQSCqj_RY-gL3BwyjiNzQYKRJIhXscqnHQo397W-AVQTnsair9FHYrMPWNlzza1fT9MPX6Cm9lEm6Hx0.jpg?r=71a"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABevoIW6wOxrk4b_rzBkDcHfs3huZ16Ipp2BYy3j3tzAx0PrAtRLHMtqBBp690CX6IlajsirUpde2AwVISBlzj0U9k_8.webp?r=f5e"
+                    alt="First slide"
+                  />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-12 d-flex m-1">
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYV8xV8WY4mnGAbg1cU64s4umr70V3c4Dy_EGA6wma_u6F0xYytloOkthdW4V5N_vJll-XrpiKVcMTd-sxFDgSJq9cKG11uOGQaVtGZd4zgSxOws-EWMvnOaSho0.jpg?r=f85"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZf6jRnvlLmszKwYTA_gpkWj7iHHu4aVXYLxUFHVmfkgSQa6Izh4AMIpwj0ncTLdCpmA7mmDPCpXjY4R1TKXUrpOb9r5nQ9aCCKh-t1Jyw9UDu4y1gnBvqBPDUAVQHr9fpjvnfpPA12D_gC_iwbaHKe4lwb4Oo5ULOk2UzqbYUC2aTeazXE4Kdk.jpg?r=344"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABXSZ1g4KlP5VvJrdL_xZaEk9xCtks-NdL6MoDfSODhugKGNuI2FlZUFyzHpiZdwBOQVoGQwqCR2QJlOH4Uyq7PQxK5mGukpqnZVJokI-g9HwKRLrPpXmz1llLyC9.jpg?r=2c4"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABd7xHz1wGtnzCxPiI4QinWJbUCWJH_f0qZlQn1B3_CEOitw_JVEkB_fQteJCZQa831xeOnfDg1kaXPm3ywL8qGy--DhdYTpRVajjg7ZLg04F5n0KBVPia7EjK5Rb4fFduvhdageSspTKakZ10XUoIESuWa_hykVwHTowIDb3EiH4Gbfgyon2JWE.jpg?r=7ec"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcQ7C25Ru8kOA8AW4Iks-V91VmzbPdH36mQkkrcEAGTPZsBjfGl6T94Z3b3zPCbs5xsGl8M0VUugwp4ncZHW4zp5J-w.webp?r=422"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABde-JMJ1QBbwKefdjPOQh8AUg-NFXiWs-cUvWxBtitqnr6y8ThHC6qjGN-ERY2ac6FEA1tEVRsMRYLR3krk9fuiizfo.webp?r=c6e"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfCzcQX1MYtuSRT3_Mp3Pz_vLG0xkSb9oizrwqHDxHxU96JYgq3xqR21E8VlwS87FanTHehnFYK4QJXF_RBCgZn3Rhn4h9M2FLelwItkp8JlNU5bwD5vBG6KK68h9vLJOF9tDBcYVor-RjUg1S86hYxvuE7r7X2GEWfU_kD1rtMxZ51Os3uD3hs17ehJX_CZpPuJg9DA5lTR0zxsPIvVTpD2.jpg?r=9c0"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSffab-b48tj8APEpXWge2vUMcJyRCujRjILeBBjTuOrntJ1-0pMcWrW9zT2ugOZEbrBtC7WtnMz5jrqDRsnrWIsrg7cBSyNckVVJM4bN2ZfGM5jFhCf1szTA43P.jpg?r=155"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABW4PQqqGYU-zvKc347ZnHwrdZk3tGtWbheqwxoXwNi-6PhiU0Dpo9xZ0H53sLfZNpChMO4w3pEhzV1cth2rHyrdopc4.webp?r=230"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeo3rqF1KcGqBdGpNHyyMTRfby4t-Y4GDef6MQK1OoX-YQSCqj_RY-gL3BwyjiNzQYKRJIhXscqnHQo397W-AVQTnsair9FHYrMPWNlzza1fT9MPX6Cm9lEm6Hx0.jpg?r=71a"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABevoIW6wOxrk4b_rzBkDcHfs3huZ16Ipp2BYy3j3tzAx0PrAtRLHMtqBBp690CX6IlajsirUpde2AwVISBlzj0U9k_8.webp?r=f5e"
+                    alt="First slide"
+                  />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-12 d-flex m-1">
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABTuHeSLmPODYeLmxcWJqrayAapDe_pKmQR_Z96Kmqbz3ngSKnLi-IXuhViGRw6FUGfJc0Ciih5Ob_CCsZ_UEZhW3deLAicRWVOl0uDX1M-oQYhM-uIW6IpvM4HNO.jpg?r=40f"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcl5EpNKfa01PxiR9kS8K1wK8Pl95wunQWZk6MUS0x4KgRRSesajECVGAElsVlcguxJy76YMXlpKD-T4_1Tx8DhXGJrTVRmtqmPGT4MVPPmuACDPgXzu2PYXh3Oi.jpg?r=0e2"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABWgeAfXIAJqTC4PUXQ0qFyI0NJR9HbsTVoAQpOE4lMeQe5E7sFQ4L5t6w0vRlhLHjzxAWUQ5EaL4TFnVjTnkoC9H-Vc.webp?r=f35"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABd7xHz1wGtnzCxPiI4QinWJbUCWJH_f0qZlQn1B3_CEOitw_JVEkB_fQteJCZQa831xeOnfDg1kaXPm3ywL8qGy--DhdYTpRVajjg7ZLg04F5n0KBVPia7EjK5Rb4fFduvhdageSspTKakZ10XUoIESuWa_hykVwHTowIDb3EiH4Gbfgyon2JWE.jpg?r=7ec"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcQ7C25Ru8kOA8AW4Iks-V91VmzbPdH36mQkkrcEAGTPZsBjfGl6T94Z3b3zPCbs5xsGl8M0VUugwp4ncZHW4zp5J-w.webp?r=422"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABde-JMJ1QBbwKefdjPOQh8AUg-NFXiWs-cUvWxBtitqnr6y8ThHC6qjGN-ERY2ac6FEA1tEVRsMRYLR3krk9fuiizfo.webp?r=c6e"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfCzcQX1MYtuSRT3_Mp3Pz_vLG0xkSb9oizrwqHDxHxU96JYgq3xqR21E8VlwS87FanTHehnFYK4QJXF_RBCgZn3Rhn4h9M2FLelwItkp8JlNU5bwD5vBG6KK68h9vLJOF9tDBcYVor-RjUg1S86hYxvuE7r7X2GEWfU_kD1rtMxZ51Os3uD3hs17ehJX_CZpPuJg9DA5lTR0zxsPIvVTpD2.jpg?r=9c0"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSffab-b48tj8APEpXWge2vUMcJyRCujRjILeBBjTuOrntJ1-0pMcWrW9zT2ugOZEbrBtC7WtnMz5jrqDRsnrWIsrg7cBSyNckVVJM4bN2ZfGM5jFhCf1szTA43P.jpg?r=155"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABW4PQqqGYU-zvKc347ZnHwrdZk3tGtWbheqwxoXwNi-6PhiU0Dpo9xZ0H53sLfZNpChMO4w3pEhzV1cth2rHyrdopc4.webp?r=230"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeo3rqF1KcGqBdGpNHyyMTRfby4t-Y4GDef6MQK1OoX-YQSCqj_RY-gL3BwyjiNzQYKRJIhXscqnHQo397W-AVQTnsair9FHYrMPWNlzza1fT9MPX6Cm9lEm6Hx0.jpg?r=71a"
+                    alt="First slide"
+                  />
+                  <img
+                    class="d-block w-100 m-1"
+                    src="https://occ-0-4727-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABevoIW6wOxrk4b_rzBkDcHfs3huZ16Ipp2BYy3j3tzAx0PrAtRLHMtqBBp690CX6IlajsirUpde2AwVISBlzj0U9k_8.webp?r=f5e"
+                    alt="First slide"
+                  />
+                </div>
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#carousel4"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carousel4"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
